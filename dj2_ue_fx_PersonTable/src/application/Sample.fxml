@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity"
+	minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0"
+	prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="application.SampleController">
+	<center>
+		<TableView fx:id="personTable" prefHeight="200.0" prefWidth="200.0"
+			BorderPane.alignment="CENTER">
+			<columns>
+				<TableColumn prefWidth="149.0" text="Vorname">
+					<cellValueFactory>
+						<PropertyValueFactory  property="vorname" />
+					</cellValueFactory>
+				</TableColumn>
+				<TableColumn prefWidth="149.0" text="Nachname">
+					<cellValueFactory>
+						<PropertyValueFactory property="nachname" />
+					</cellValueFactory>
+				</TableColumn>
+				<TableColumn prefWidth="149.0" text="Geburtsdatum">
+					<cellValueFactory>
+						<PropertyValueFactory property="geburtsdatum" />
+					</cellValueFactory>
+				</TableColumn>
+				
+			</columns>
+		</TableView>
+	</center>
+	<top>
+		<HBox fx:id="gebFeld" prefHeight="74.0" prefWidth="600.0"
+			BorderPane.alignment="CENTER">
+			<children>
+				<TextField fx:id="vornameFeld" promptText="Vorname">
+					<HBox.margin>
+						<Insets right="10.0" />
+					</HBox.margin>
+				</TextField>
+				<TextField fx:id="nachnameFeld" promptText="Nachname">
+					<HBox.margin>
+						<Insets right="10.0" />
+					</HBox.margin>
+				</TextField>
+				<DatePicker fx:id="datePicker" promptText="Geburtsdatum">
+					<HBox.margin>
+						<Insets right="10.0" />
+					</HBox.margin>
+				</DatePicker>
+				<Button mnemonicParsing="false" onAction="#send" text="Send">
+					<HBox.margin>
+						<Insets right="10.0" />
+					</HBox.margin>
+				</Button>
+			</children>
+			<opaqueInsets>
+				<Insets />
+			</opaqueInsets>
+			<BorderPane.margin>
+				<Insets />
+			</BorderPane.margin>
+			<padding>
+				<Insets left="10.0" right="10.0" top="10.0" />
+			</padding>
+		</HBox>
+	</top>
+</BorderPane>
