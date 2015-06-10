@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity"
+	minHeight="-Infinity" minWidth="-Infinity" prefHeight="463.0"
+	prefWidth="672.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="application.ImageViewController">
+	<top>
+		<MenuBar BorderPane.alignment="CENTER">
+			<menus>
+				<Menu mnemonicParsing="false" text="File">
+					<items>
+						<MenuItem mnemonicParsing="false" onAction="#open" text="Open" />
+					</items>
+				</Menu>
+				<Menu mnemonicParsing="false" text="Edit">
+					<items>
+						<MenuItem mnemonicParsing="false" text="Delete" />
+					</items>
+				</Menu>
+				<Menu mnemonicParsing="false" text="Help">
+					<items>
+						<MenuItem mnemonicParsing="false" text="About" />
+					</items>
+				</Menu>
+			</menus>
+		</MenuBar>
+	</top>
+	<center>
+		<SplitPane dividerPositions="0.5" orientation="VERTICAL"
+			prefHeight="438.0" prefWidth="517.0">
+			<items>
+
+
+				<ScrollPane maxHeight="-Infinity" minHeight="-Infinity"
+					prefHeight="117.0" prefViewportHeight="199.0" prefViewportWidth="646.0"
+					prefWidth="565.0">
+					<content>
+						<TableView fx:id="imageTableView" editable="true"
+							prefHeight="236.0" prefWidth="624.0" BorderPane.alignment="CENTER">
+							<columns>
+								<TableColumn prefWidth="152.0" text="Name">
+									<cellValueFactory>
+										<PropertyValueFactory property="name" />
+									</cellValueFactory>
+								</TableColumn>
+								<TableColumn prefWidth="201.0" text="Pfad">
+									<cellValueFactory>
+										<PropertyValueFactory property="path" />
+									</cellValueFactory>
+								</TableColumn>
+								<TableColumn prefWidth="181.0" text="LastModified">
+									<cellValueFactory>
+										<PropertyValueFactory property="lastMod" />
+									</cellValueFactory>
+								</TableColumn>
+							</columns>
+						</TableView>
+					</content>
+				</ScrollPane>
+
+
+
+				<ScrollPane fx:id="imageScroll" layoutY="-71.0"
+					prefHeight="304.0" prefViewportHeight="231.0" prefViewportWidth="278.0"
+					prefWidth="556.0">
+					<content>
+						<ImageView fx:id="mainImageView" fitHeight="301.0"
+							fitWidth="551.0" pickOnBounds="true" preserveRatio="true" />
+					</content>
+				</ScrollPane>
+
+
+			</items>
+
+		</SplitPane>
+	</center>
+	<left>
+		<HBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity"
+			minHeight="-Infinity" minWidth="-Infinity" prefHeight="195.0"
+			prefWidth="105.0">
+			<children>
+				<Slider fx:id="sliderSize" max="1.0" min="0.5" orientation="VERTICAL"
+					showTickLabels="true" showTickMarks="true" value="1.0"
+					BorderPane.alignment="CENTER" />
+				<Slider fx:id="sliderOpacity" max="1.0" orientation="VERTICAL"
+					showTickLabels="true" showTickMarks="true" value="1.0" />
+			</children>
+		</HBox>
+	</left>
+</BorderPane>
