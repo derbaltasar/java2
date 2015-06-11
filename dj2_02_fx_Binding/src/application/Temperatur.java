@@ -13,6 +13,8 @@ import javafx.beans.property.SimpleFloatProperty;
  */
 public class Temperatur {
 	private FloatProperty gradCelsius = new SimpleFloatProperty();
+	
+	
 
 	public final FloatProperty gradCelsiusProperty() {
 		return this.gradCelsius;
