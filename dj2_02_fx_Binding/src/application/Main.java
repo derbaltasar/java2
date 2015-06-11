@@ -61,7 +61,7 @@ public class Main extends Application {
 			
 			
 			
-			//////////----
+			//////////---- oder alternativ Listener
 			
 			
 			t.gradCelsiusProperty().addListener(new ChangeListener<Number>() {
