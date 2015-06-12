@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<menubar>
+	<menu name="File">	<!-- Kommentar -->
+		
+		<menuitem>Open</menuitem><menuitem>Exit</menuitem>
+	</menu>
+	<menu name="Edit">
+		<menuitem>Copy</menuitem>
+		<menuitem>Paste</menuitem>
+	</menu>
+</menubar>
