@@ -44,8 +44,11 @@ public class DBTest {
 			// Update-------------------------
 			PreparedStatement updateStatement  = con.prepareStatement("UPDATE mitarbeiter SET nachname = ? WHERE id = ?");
 			
+			updateStatement.setString(1, "Müller");
+			updateStatement.setInt(2, 1);// 2. Platzhalter, id=1
+			updateStatement.executeUpdate();
 			
-			
+			show(con);
 			con.close();// TODO 
 		} catch (SQLException e) {
 			e.printStackTrace();

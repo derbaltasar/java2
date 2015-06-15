@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+
+
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8"
+	fx:controller="de.cimdata.dbtable.ui.GehaltController">
+	<center>
+		<TableView fx:id="gehaltTableView" prefHeight="254.0"
+			prefWidth="230.0" BorderPane.alignment="CENTER">
+			<columns>
+				<TableColumn prefWidth="75.0" text="Name">
+					<cellValueFactory>
+						<PropertyValueFactory property="name" />
+					</cellValueFactory>
+				</TableColumn>
+				<TableColumn prefWidth="75.0" text="Netto">
+					<cellValueFactory>
+						<PropertyValueFactory property="netto" />
+					</cellValueFactory>
+				</TableColumn>
+			</columns>
+		</TableView>
+	</center>
+</BorderPane>
