@@ -14,13 +14,13 @@ import java.util.Properties;
  */
 public final class DBProp {
 	
-	public final static String PROPERTY_PATH = "de/cimdata/dbtable/properties/db.properties";
+	public final static String PROPERTY_PATH = "/de/cimdata/dbtable/properties/db.properties";
 	
 	private static Properties props;
 	
 	private DBProp(){}
 		
-	static{//statischer Konstruktor (wird beim Laden der Klasse aufegrufen)
+	static{//statischer "Konstruktor" (wird beim Laden der Klasse aufegrufen)
 		props = new Properties();
 		
 		
