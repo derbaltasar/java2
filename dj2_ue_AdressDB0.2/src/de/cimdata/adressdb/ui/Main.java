@@ -6,7 +6,19 @@ import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
 import javafx.fxml.FXMLLoader;
 
-
+/**
+ * - Tabs
+ * - Daten zeigen (select all)
+ * - neuer Datensatz
+ * - Rückmeldung
+ * neu:
+ * - update
+ * 
+ * Java 2
+ * @author M. Schirmer (Dozent)
+ * dj2_ue_AdressDB0.2: Main.java
+ * 17.06.2015
+ */
 public class Main extends Application {
 	@Override
 	public void start(Stage primaryStage) {
