@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.cell.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.cimdata.adressdb.ui.AdressController">
+	<center>
+      <TabPane>
+         <tabs>
+            <Tab closable="false" text="Übersicht">
+               <content>
+            		<TableView fx:id="personTableView" editable="true" prefHeight="307.0" prefWidth="696.0" BorderPane.alignment="CENTER">
+            			<columns>
+            				<TableColumn fx:id="idColumn" prefWidth="75.0" text="Id">
+            					<cellValueFactory>
+            						<PropertyValueFactory property="id" />
+            					</cellValueFactory>
+            				</TableColumn>
+            				<TableColumn fx:id="vornameColumn" prefWidth="75.0" text="Vorname">
+            
+            					<cellValueFactory>
+            						<PropertyValueFactory property="vorname" />
+            					</cellValueFactory>
+            				</TableColumn>
+            				<TableColumn fx:id="nachnameColumn" prefWidth="75.0" text="Nachname">
+            					<cellValueFactory>
+            						<PropertyValueFactory property="nachname" />
+            					</cellValueFactory>
+            				</TableColumn>
+            				<TableColumn fx:id="plzColumn" prefWidth="75.0" text="PLZ">
+            					<cellValueFactory>
+            						<PropertyValueFactory property="plz" />
+            					</cellValueFactory>
+            				</TableColumn>
+            				<TableColumn fx:id="ortColumn" prefWidth="75.0" text="Ort">
+            					<cellValueFactory>
+            						<PropertyValueFactory property="ort" />
+            					</cellValueFactory>
+            				</TableColumn>
+            				<TableColumn fx:id="strasseColumn" prefWidth="75.0" text="Straße">
+            					<cellValueFactory>
+            						<PropertyValueFactory property="strasse" />
+            					</cellValueFactory>
+            				</TableColumn>
+            				<TableColumn fx:id="telefonColumn" onEditCommit="#editCommit" prefWidth="75.0" text="Telefon">
+            					<cellValueFactory>
+            						<PropertyValueFactory property="telefon" />
+            					</cellValueFactory>
+            				</TableColumn>
+            				<TableColumn fx:id="mobilColumn" onEditCommit="#editCommit" prefWidth="75.0" text="Mobil">
+            					<cellValueFactory>
+            						<PropertyValueFactory property="mobil" />
+            					</cellValueFactory>
+            				</TableColumn>
+            				<TableColumn fx:id="emailColumn" onEditCommit="#editCommit" prefWidth="75.0" text="E-Mail">
+            					<cellValueFactory>
+            						<PropertyValueFactory property="email" />
+            					</cellValueFactory>
+            				</TableColumn>
+            			</columns>
+            		</TableView>
+               </content>
+            </Tab>
+            <Tab text="Neuer Datensatz">
+               <content>
+                  <AnchorPane prefHeight="333.0" prefWidth="696.0">
+                     <children>
+                        <VBox fx:id="formBox" layoutX="68.0" layoutY="14.0">
+                           <children>
+                              <TextField fx:id="vornameFeld" layoutX="68.0" layoutY="14.0" prefHeight="25.0" prefWidth="199.0" promptText="Vorname">
+                                 <padding>
+                                    <Insets bottom="4.0" />
+                                 </padding>
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" />
+                                 </VBox.margin>
+                              </TextField>
+                              <TextField fx:id="nachnameFeld" layoutX="68.0" layoutY="52.0" prefHeight="25.0" prefWidth="199.0" promptText="Nachname">
+                                 <padding>
+                                    <Insets bottom="4.0" />
+                                 </padding>
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" />
+                                 </VBox.margin>
+                              </TextField>
+                              <TextField fx:id="plzFeld" layoutX="68.0" layoutY="92.0" prefHeight="25.0" prefWidth="199.0" promptText="PLZ">
+                                 <padding>
+                                    <Insets bottom="4.0" />
+                                 </padding>
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" />
+                                 </VBox.margin>
+                              </TextField>
+                              <TextField fx:id="ortFeld" layoutX="68.0" layoutY="130.0" prefHeight="25.0" prefWidth="199.0" promptText="Ort">
+                                 <padding>
+                                    <Insets bottom="4.0" />
+                                 </padding>
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" />
+                                 </VBox.margin>
+                              </TextField>
+                              <TextField fx:id="strasseFeld" layoutX="68.0" layoutY="167.0" prefHeight="25.0" prefWidth="199.0" promptText="Straße/ Nr.">
+                                 <padding>
+                                    <Insets bottom="4.0" />
+                                 </padding>
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" />
+                                 </VBox.margin>
+                              </TextField>
+                              <TextField fx:id="telefonFeld" layoutX="68.0" layoutY="203.0" prefHeight="25.0" prefWidth="199.0" promptText="Telefon">
+                                 <padding>
+                                    <Insets bottom="4.0" />
+                                 </padding>
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" />
+                                 </VBox.margin>
+                              </TextField>
+                              <TextField fx:id="mobilFeld" layoutX="68.0" layoutY="241.0" prefHeight="25.0" prefWidth="199.0" promptText="Mobill">
+                                 <padding>
+                                    <Insets bottom="4.0" />
+                                 </padding>
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" />
+                                 </VBox.margin>
+                              </TextField>
+                              <TextField fx:id="emailFeld" layoutX="68.0" layoutY="278.0" prefHeight="25.0" prefWidth="199.0" promptText="E-Mail">
+                                 <padding>
+                                    <Insets bottom="4.0" />
+                                 </padding>
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" />
+                                 </VBox.margin>
+                              </TextField>
+                           </children>
+                           <padding>
+                              <Insets bottom="10.0" top="10.0" />
+                           </padding>
+                        </VBox>
+                        <Button layoutX="339.0" layoutY="278.0" mnemonicParsing="false" onAction="#save" text="Save" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            
+            
+         </tabs>
+      </TabPane>
+	</center>
+   <top>
+      <ToolBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <items>
+            <Button mnemonicParsing="false" onAction="#refresh" text="Refresh" />
+            <Label fx:id="infoLabel" prefHeight="35.0" prefWidth="274.0" textFill="#a82b1d">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="filterComboBox" prefWidth="150.0">
+            
+            </ComboBox>
+            <TextField fx:id="suchFeld" />
+            <Button mnemonicParsing="false" onAction="#find" text="Find" />
+         </items>
+      </ToolBar>
+   </top>
+</BorderPane>
