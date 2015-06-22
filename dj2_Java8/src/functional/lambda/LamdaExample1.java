@@ -4,6 +4,8 @@ package functional.lambda;
 interface MyInterface1{
 	public int test(String s); // return int
 }
+
+
 @FunctionalInterface
 interface MyInterface2{
 	public void test(String s);// void 
@@ -23,7 +25,7 @@ public class LamdaExample1 {
 		};
 		
 		//Lamda
-		MyInterface1 m2 = (String s)-> {
+		MyInterface1 m2 = (s)-> {
 			return s.length();
 		}; 
 		

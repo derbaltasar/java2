@@ -26,9 +26,12 @@ public class Main extends Application {
 				Task<String> task = getTask();
 				Thread t1 = new Thread(task);
 				t1.start();
+				
+				
+				///   <--------
 				l1.textProperty().bind(task.messageProperty());//updateMessage
-				l2.textProperty().bind(task.valueProperty());
-				l3.textProperty().bind(task.progressProperty().asString());
+				l2.textProperty().bind(task.valueProperty());//updateValue
+				l3.textProperty().bind(task.progressProperty().asString());// updateProgress
 				
 				l2.setMinWidth(100);
 				pi.progressProperty().bind(task.progressProperty());
