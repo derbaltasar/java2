@@ -12,7 +12,6 @@ public class URLService extends Service<String> {
 
 	
 	public URLService() {
-		// TODO Auto-generated constructor stub
 	}
 	public URLService(String urlString) {
 		this.urlString = urlString;
@@ -24,13 +23,20 @@ public class URLService extends Service<String> {
 			@Override
 			protected String call() throws Exception {
 				updateMessage("call...");
+				int count=0;
+				final int MAX =500;
+				
 				URL url = new URL(getUrlString());
 				StringBuilder sb = new StringBuilder();
 				Scanner sc = new Scanner(url.openStream());
 				while (sc.hasNextLine()) {
 					sb.append(sc.nextLine());
+					updateProgress(count, MAX);
+					count++;
 				}
-				
+				updateProgress(MAX, MAX);
+				updateMessage("finish...");
+				sc.close();
 				return sb.toString();
 			}
 		};

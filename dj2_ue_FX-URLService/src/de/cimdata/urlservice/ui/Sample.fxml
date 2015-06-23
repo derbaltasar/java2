@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.text.*?>
 <?import javafx.scene.control.*?>
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
@@ -20,11 +21,7 @@
          <tabs>
             <Tab text="Quelltext">
                <content>
-                  <ScrollPane prefViewportHeight="200.0" prefViewportWidth="462.0">
-                     <content>
                         <TextArea fx:id="textArea" editable="false" prefHeight="288.0" prefWidth="525.0" wrapText="true" BorderPane.alignment="CENTER" />
-                     </content>
-                  </ScrollPane>
                </content>
             </Tab>
             <Tab text="Links">
@@ -36,6 +33,9 @@
       </TabPane>
    </center>
    <bottom>
-      <Label fx:id="infoLabel" BorderPane.alignment="CENTER" />
+      <Label fx:id="infoLabel" textFill="#3e15e1" BorderPane.alignment="CENTER">
+         <font>
+            <Font size="15.0" />
+         </font></Label>
    </bottom>
 </BorderPane>
