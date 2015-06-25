@@ -69,8 +69,8 @@ public class SampleController {
 					if (count == MAX / 4 ) {
 
 						synchronized (monitor) {
-							monitor.notify();// 
-							monitor.wait();
+							monitor.notify();// anderen aufwecken
+							monitor.wait(); // selber schlafen legen
 
 						}
 

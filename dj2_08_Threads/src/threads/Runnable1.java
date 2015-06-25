@@ -1,5 +1,7 @@
 package threads;
 
+import java.sql.Savepoint;
+
 /*
  * Variante 2: Runnable implementieren
  */
@@ -22,9 +24,6 @@ public class Runnable1 implements Runnable {
 		
 		Thread t1 = new Thread(new Runnable1());
 		t1.start();
-		
-		
-		
 		// "Variante 3" anonym
 		
 		Thread t2 = new Thread(new Runnable() {
@@ -34,9 +33,7 @@ public class Runnable1 implements Runnable {
 			}
 		});
 		
-		
 		t2.start();
-		
 		Thread t3 = new Thread( ()-> {}); //Lambda
 
 	}

@@ -2,6 +2,9 @@ package threads;
 
 public class Thread1 extends Thread{
 	
+	
+
+	
 	private boolean stop = false;
 
 	
