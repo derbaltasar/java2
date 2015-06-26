@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="422.0" prefWidth="623.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MessengerController">
+   <top>
+      <ToolBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+        <items>
+            <TextField fx:id="serverHostField" text="127.0.0.1" />
+          <Button mnemonicParsing="false" onAction="#serverStartButtonAction" text="Local Server start" />
+            <TextField fx:id="nameField" promptText="My Name" />
+        </items>
+      </ToolBar>
+   </top>
+   <center>
+      <ScrollPane prefViewportHeight="304.0" prefViewportWidth="623.0">
+         <content>
+            <TableView fx:id="messageTableView" prefHeight="304.0" prefWidth="611.0" BorderPane.alignment="CENTER">
+              <columns>
+                <TableColumn prefWidth="116.0" text="Name">
+                	<cellValueFactory>
+                		<PropertyValueFactory property="name" />
+                	</cellValueFactory>
+                </TableColumn>
+                <TableColumn prefWidth="257.0" text="Nachricht">
+                <cellValueFactory>
+                		<PropertyValueFactory property="message" />
+                	</cellValueFactory>
+                </TableColumn>
+                  <TableColumn prefWidth="238.0" text="Zeit">
+                 	 <cellValueFactory>
+                		<PropertyValueFactory property="time" />
+                	</cellValueFactory>
+                  </TableColumn>
+              </columns>
+            </TableView>
+         </content>
+      </ScrollPane>
+   </center>
+   <bottom>
+      <AnchorPane prefHeight="78.0" prefWidth="623.0" BorderPane.alignment="CENTER">
+         <children>
+            <TextField fx:id="sendMessageField" layoutX="26.0" layoutY="8.0" onKeyPressed="#sendMessageKeyAction" prefHeight="25.0" prefWidth="513.0" />
+            <TextField fx:id="connectRemoteServerHostField" layoutX="26.0" layoutY="45.0" prefHeight="25.0" prefWidth="135.0" text="127.0.0.1" />
+            <Button fx:id="sendMessage" layoutX="550.0" layoutY="8.0" mnemonicParsing="false" onAction="#sendMessageButtonAction" text="Send" />
+            <Button layoutX="178.0" layoutY="45.0" mnemonicParsing="false" onAction="#remoteServerConnectButtonAction" text="Connect to Remote Server" />
+         </children>
+      </AnchorPane>
+   </bottom>
+</BorderPane>
